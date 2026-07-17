@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,87 +10,79 @@
 <style>
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Inter,Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,Arial,sans-serif;
 }
 
 body{
-    background:#050505;
-    color:white;
+background:#050505;
+color:#fff;
 }
 
 
-/* HEADER */
-
 header{
-    height:78px;
-    border-bottom:1px solid #222;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 8%;
+height:82px;
+border-bottom:1px solid #222;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+position:sticky;
+top:0;
+background:#050505ee;
+z-index:10;
 }
 
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:24px;
-    font-weight:700;
+display:flex;
+align-items:center;
+gap:12px;
+font-size:25px;
+font-weight:800;
 }
 
 
 .logo-icon{
-    width:42px;
-    height:42px;
-    background:#ff9500;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 0 25px #ff950055;
-}
-
-
-.logo-icon svg{
-    width:25px;
-    height:25px;
-    fill:none;
-    stroke:#111;
-    stroke-width:2.5;
+width:44px;
+height:44px;
+border-radius:14px;
+background:#ff9500;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#111;
+font-size:25px;
 }
 
 
 nav{
-    display:flex;
-    gap:45px;
+display:flex;
+gap:35px;
 }
 
 
 nav a{
-    color:#aaa;
-    text-decoration:none;
-    font-size:15px;
+color:#999;
+text-decoration:none;
+font-size:15px;
 }
 
 
 nav a:hover{
-    color:white;
+color:white;
 }
 
 
-
 .btn{
-    background:#ff9500;
-    color:white;
-    border:none;
-    padding:14px 28px;
-    border-radius:12px;
-    font-weight:600;
-    cursor:pointer;
+background:#ff9500;
+border:0;
+padding:15px 30px;
+border-radius:12px;
+color:white;
+font-weight:700;
 }
 
 
@@ -97,103 +90,323 @@ nav a:hover{
 
 
 .hero{
-    min-height:720px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 8%;
+
+min-height:760px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+
 }
 
 
-.left{
-    width:50%;
+.hero-left{
+width:55%;
+}
+
+
+.badge{
+
+display:inline-block;
+padding:8px 16px;
+border:1px solid #333;
+border-radius:30px;
+color:#aaa;
+margin-bottom:25px;
+font-size:14px;
+
 }
 
 
 h1{
-    font-size:72px;
-    line-height:1.05;
-    letter-spacing:-2px;
+
+font-size:76px;
+line-height:1.05;
+letter-spacing:-3px;
+
 }
 
 
 .orange{
-    color:#ff9500;
+color:#ff9500;
 }
 
 
 .subtitle{
-    margin-top:30px;
-    color:#999;
-    font-size:20px;
-    line-height:1.5;
-    max-width:600px;
+
+font-size:21px;
+color:#999;
+line-height:1.5;
+margin-top:30px;
+max-width:620px;
+
 }
 
 
 .buttons{
-    margin-top:40px;
-    display:flex;
-    gap:18px;
+
+margin-top:40px;
+display:flex;
+gap:20px;
+
 }
 
 
-.secondary{
-    background:none;
-    border:1px solid #444;
+.outline{
+
+background:none;
+border:1px solid #444;
+
 }
 
-
-
-/* DASHBOARD CARD */
 
 
 .dashboard{
 
-    width:380px;
-    padding:25px;
+width:420px;
+background:#111;
+border:1px solid #292929;
+border-radius:28px;
+padding:28px;
+box-shadow:0 0 80px #ff950020;
 
-    background:#111;
-    border:1px solid #292929;
-    border-radius:24px;
+}
 
-    box-shadow:
-    0 0 80px #ff950015;
+
+.dashboard h3{
+
+color:#888;
+margin-bottom:20px;
+
+}
+
+
+.item{
+
+background:#191919;
+padding:20px;
+border-radius:18px;
+margin-bottom:15px;
+
+}
+
+
+.item small{
+color:#777;
+}
+
+
+.item strong{
+
+display:block;
+font-size:30px;
+color:#ff9500;
+margin-top:8px;
+
+}
+
+
+/* FEATURES */
+
+
+section{
+
+padding:100px 8%;
+
+}
+
+
+.title{
+
+font-size:48px;
+margin-bottom:50px;
+
+}
+
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+
+}
+
+
+.card{
+
+background:#111;
+border:1px solid #222;
+padding:30px;
+border-radius:22px;
+
+}
+
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+
+.card p{
+
+color:#888;
+line-height:1.5;
 
 }
 
 
 
-.card-title{
-    color:#888;
-    margin-bottom:20px;
-}
+/* PRODUCT */
 
 
-.stat{
+.product{
 
-    background:#191919;
-    padding:22px;
-    border-radius:16px;
-    margin-bottom:15px;
+display:flex;
+gap:80px;
+align-items:center;
 
 }
 
 
+.product-text{
 
-.stat span{
-    color:#777;
-    font-size:14px;
+width:45%;
+
 }
 
 
-.stat strong{
-    display:block;
-    margin-top:8px;
-    font-size:28px;
-    color:#ff9500;
+.product-ui{
+
+width:50%;
+background:#111;
+border:1px solid #333;
+padding:30px;
+border-radius:30px;
+
 }
 
+
+.line{
+
+height:12px;
+background:#222;
+border-radius:20px;
+margin:15px 0;
+
+}
+
+
+.progress{
+
+height:12px;
+width:68%;
+background:#ff9500;
+border-radius:20px;
+
+}
+
+
+
+.stat-row{
+
+display:flex;
+justify-content:space-between;
+padding:20px 0;
+border-bottom:1px solid #222;
+
+}
+
+
+/* STEPS */
+
+
+.steps{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+
+.step{
+
+background:#111;
+padding:35px;
+border-radius:22px;
+
+}
+
+
+.number{
+
+color:#ff9500;
+font-size:40px;
+font-weight:800;
+
+}
+
+
+/* NUMBERS */
+
+
+.numbers{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+
+}
+
+
+.number-box{
+
+background:#111;
+padding:35px;
+border-radius:22px;
+text-align:center;
+
+}
+
+
+.number-box strong{
+
+display:block;
+font-size:45px;
+color:#ff9500;
+
+}
+
+
+/* CTA */
+
+
+.cta{
+
+background:#111;
+border-radius:35px;
+text-align:center;
+
+}
+
+
+.cta h2{
+
+font-size:55px;
+
+}
+
+
+footer{
+
+padding:40px 8%;
+color:#777;
+border-top:1px solid #222;
+
+}
 
 
 </style>
@@ -210,13 +423,7 @@ h1{
 <div class="logo">
 
 <div class="logo-icon">
-
-<svg viewBox="0 0 24 24">
-<path d="M4 20V9l8-5 8 5v11"/>
-<path d="M9 20v-6h6v6"/>
-<path d="M7 10h10"/>
-</svg>
-
+⌂
 </div>
 
 ProРаб
@@ -224,17 +431,15 @@ ProРаб
 </div>
 
 
-
 <nav>
 
-<a href="#">Продукты</a>
-<a href="#">Возможности</a>
-<a href="#">Для компаний</a>
-<a href="#">Цены</a>
-<a href="#">Документы</a>
+<a>Платформа</a>
+<a>Возможности</a>
+<a>Решения</a>
+<a>Интеграции</a>
+<a>Цены</a>
 
 </nav>
-
 
 
 <button class="btn">
@@ -247,20 +452,25 @@ ProРаб
 
 
 
+<div class="hero">
 
-<section class="hero">
+
+<div class="hero-left">
 
 
-<div class="left">
+<div class="badge">
+SaaS-платформа для строительных компаний
+</div>
 
 
 <h1>
 
-Управляйте<br>
-стройкой<br>
+Стройка
+<br>
 
 <span class="orange">
-без хаоса
+под контролем
+
 </span>
 
 </h1>
@@ -268,31 +478,27 @@ ProРаб
 
 <p class="subtitle">
 
-ProРаб — единая SaaS-платформа
-для строительных компаний:
-сметы, CRM, материалы и контроль объектов.
+ProРаб объединяет сметы,
+CRM, материалы, документы
+и контроль объектов в одной системе.
 
 </p>
-
 
 
 <div class="buttons">
 
 <button class="btn">
-Создать проект
+Попробовать бесплатно
 </button>
 
-
-<button class="btn secondary">
+<button class="btn outline">
 Смотреть демо
 </button>
 
-
 </div>
 
 
 </div>
-
 
 
 
@@ -300,17 +506,16 @@ ProРаб — единая SaaS-платформа
 <div class="dashboard">
 
 
-<div class="card-title">
+<h3>
 Панель управления
-</div>
+</h3>
 
 
+<div class="item">
 
-<div class="stat">
-
-<span>
+<small>
 Активные объекты
-</span>
+</small>
 
 <strong>
 12
@@ -319,12 +524,11 @@ ProРаб — единая SaaS-платформа
 </div>
 
 
+<div class="item">
 
-<div class="stat">
-
-<span>
+<small>
 Бюджет проектов
-</span>
+</small>
 
 <strong>
 24 млн ₽
@@ -333,12 +537,11 @@ ProРаб — единая SaaS-платформа
 </div>
 
 
+<div class="item">
 
-<div class="stat">
-
-<span>
-Выполнено работ
-</span>
+<small>
+Выполнение
+</small>
 
 <strong>
 68%
@@ -347,12 +550,275 @@ ProРаб — единая SaaS-платформа
 </div>
 
 
+</div>
+
 
 </div>
 
 
 
+
+
+<section>
+
+
+<h2 class="title">
+Всё необходимое для стройки
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+<h3>Сметы</h3>
+<p>
+Расчёт стоимости работ и материалов без ошибок.
+</p>
+</div>
+
+
+<div class="card">
+<h3>CRM клиентов</h3>
+<p>
+Все заказчики и объекты в одном месте.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Материалы</h3>
+<p>
+Контроль склада и закупок.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Документы</h3>
+<p>
+Договоры, акты и файлы проекта.
+</p>
+</div>
+
+
+</div>
+
 </section>
+
+
+
+
+
+<section>
+
+
+<div class="product">
+
+
+<div class="product-text">
+
+<h2 class="title">
+Один кабинет вместо десятков таблиц
+</h2>
+
+<p class="subtitle">
+
+Контролируйте сроки,
+бюджеты и задачи команды
+в реальном времени.
+
+</p>
+
+</div>
+
+
+
+<div class="product-ui">
+
+
+<h3>
+Объект: ЖК Северный
+</h3>
+
+
+<div class="line"></div>
+
+
+<div class="progress"></div>
+
+
+<div class="stat-row">
+<span>
+Бюджет
+</span>
+<b>
+24 млн ₽
+</b>
+</div>
+
+
+<div class="stat-row">
+<span>
+Команда
+</span>
+<b>
+42 человека
+</b>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+Как работает ProРаб
+</h2>
+
+
+<div class="steps">
+
+
+<div class="step">
+<div class="number">
+01
+</div>
+<h3>
+Создайте объект
+</h3>
+<p>
+Добавьте проект, смету и команду.
+</p>
+</div>
+
+
+
+<div class="step">
+<div class="number">
+02
+</div>
+<h3>
+Управляйте процессом
+</h3>
+<p>
+Контролируйте задачи и материалы.
+</p>
+</div>
+
+
+
+<div class="step">
+<div class="number">
+03
+</div>
+<h3>
+Получайте результат
+</h3>
+<p>
+Сроки и расходы всегда под контролем.
+</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="numbers">
+
+
+<div class="number-box">
+<strong>
+30%
+</strong>
+эффективнее
+</div>
+
+
+<div class="number-box">
+<strong>
+5+
+</strong>
+модулей
+</div>
+
+
+<div class="number-box">
+<strong>
+24/7
+</strong>
+контроль
+</div>
+
+
+<div class="number-box">
+<strong>
+100%
+</strong>
+онлайн
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="cta">
+
+
+<h2>
+Начните управлять стройкой сегодня
+</h2>
+
+
+<br>
+
+
+<button class="btn">
+Создать проект бесплатно
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 ProРаб. SaaS-платформа управления строительством.
+
+</footer>
 
 
 
