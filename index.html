@@ -8,34 +8,30 @@
 
 <style>
 
-*{
+* {
     box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
 }
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#080808;
+body {
+    background:#050505;
     color:white;
 }
 
-header{
-    position:fixed;
-    top:0;
-    width:100%;
+
+header {
     height:80px;
+    border-bottom:1px solid #222;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:0 8%;
-    background:rgba(8,8,8,.85);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #222;
-    z-index:10;
 }
 
 
-.logo{
+.logo {
     display:flex;
     align-items:center;
     gap:12px;
@@ -44,100 +40,167 @@ header{
 }
 
 
-.logo-icon{
+.logo-box {
     width:38px;
     height:38px;
-    border-radius:10px;
     background:#ff8500;
+    border-radius:10px;
     display:flex;
     align-items:center;
     justify-content:center;
     color:black;
-    font-weight:900;
-}
-
-
-nav{
-    display:flex;
-    gap:35px;
-    color:#bbb;
-}
-
-nav a{
-    color:#bbb;
-    text-decoration:none;
-}
-
-nav a:hover{
-    color:white;
-}
-
-
-.btn{
-    background:#ff8500;
-    color:white;
-    padding:14px 25px;
-    border-radius:10px;
-    text-decoration:none;
     font-weight:bold;
 }
 
 
-.hero{
-    min-height:100vh;
-    padding:180px 8% 80px;
+
+nav {
+    display:flex;
+    gap:45px;
+}
+
+
+nav a {
+    color:#aaa;
+    text-decoration:none;
+}
+
+
+nav a:hover {
+    color:white;
+}
+
+
+
+button {
+    background:#ff8500;
+    color:white;
+    border:none;
+    padding:15px 28px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+
+.hero {
+
+    min-height:720px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    padding:0 8%;
+
 }
 
 
-.hero-text{
-    max-width:650px;
-}
 
+.hero h1 {
 
-h1{
     font-size:72px;
     line-height:1.05;
-    margin:0 0 25px;
+    max-width:650px;
+
 }
 
 
-.orange{
+.orange {
     color:#ff8500;
 }
 
 
-p{
+
+.hero p {
+
+    margin-top:30px;
     color:#aaa;
     font-size:22px;
-    line-height:1.5;
+    max-width:600px;
+
 }
 
 
-.mockup{
-    width:450px;
-    height:330px;
-    background:#151515;
+.hero button {
+    margin-top:40px;
+}
+
+
+
+.dashboard {
+
+    width:420px;
+    background:#171717;
     border:1px solid #333;
-    border-radius:20px;
+    border-radius:25px;
+    padding:30px;
+
+}
+
+
+.card {
+
+    background:#222;
+    margin-bottom:18px;
     padding:25px;
-    box-shadow:0 0 60px rgba(255,130,0,.15);
+    border-radius:15px;
+
 }
 
 
-.card{
-    background:#202020;
-    padding:18px;
-    border-radius:12px;
-    margin-bottom:15px;
+
+.card span {
+
+    color:#999;
+    display:block;
+
 }
 
 
-.card span{
+
+.card strong {
+
     color:#ff8500;
-    font-size:24px;
+    font-size:28px;
+
+}
+
+
+
+.features {
+
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+
+
+.feature {
+
+background:#151515;
+padding:35px;
+border-radius:20px;
+
+}
+
+
+
+.feature h3 {
+
+font-size:25px;
+margin-bottom:15px;
+
+}
+
+
+
+.feature p {
+
+color:#aaa;
+
 }
 
 
@@ -152,22 +215,27 @@ p{
 <header>
 
 <div class="logo">
-<div class="logo-icon">P</div>
+
+<div class="logo-box">P</div>
+
 ProРаб
+
 </div>
 
 
 <nav>
+
 <a href="#">Возможности</a>
 <a href="#">Решения</a>
 <a href="#">Тарифы</a>
 <a href="#">Документы</a>
+
 </nav>
 
 
-<a class="btn" href="#">
+<button>
 Начать бесплатно
-</a>
+</button>
 
 
 </header>
@@ -177,12 +245,15 @@ ProРаб
 <section class="hero">
 
 
-<div class="hero-text">
+<div>
 
 <h1>
-Управляйте стройкой
-<br>
-на <span class="orange">30%</span> эффективнее
+
+Управляйте<br>
+стройкой<br>
+на <span class="orange">30%</span><br>
+эффективнее
+
 </h1>
 
 
@@ -192,39 +263,87 @@ ProРаб
 </p>
 
 
-<br>
-
-<a class="btn">
+<button>
 Создать проект
-</a>
+</button>
 
 
 </div>
 
 
 
-<div class="mockup">
 
-<div class="card">
-Объекты
-<br>
-<span>12</span>
-</div>
+<div class="dashboard">
 
 
 <div class="card">
-Бюджет проектов
-<br>
-<span>24 млн ₽</span>
+<span>Объекты</span>
+<strong>12</strong>
 </div>
 
 
 <div class="card">
-Выполнение
-<br>
-<span>68%</span>
+<span>Бюджет проектов</span>
+<strong>24 млн ₽</strong>
 </div>
 
+
+
+<div class="card">
+<span>Выполнение</span>
+<strong>68%</strong>
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<section class="features">
+
+
+<div class="feature">
+
+<h3>
+Сметы и расчёты
+</h3>
+
+<p>
+Автоматизация расчётов и контроль бюджета строительства.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<h3>
+CRM клиентов
+</h3>
+
+<p>
+Все заказчики и объекты в одном месте.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<h3>
+Склад материалов
+</h3>
+
+<p>
+Учёт материалов без потерь.
+</p>
 
 </div>
 
