@@ -1,174 +1,155 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ProРаб — автоматические сметы для строительства</title>
+<title>ProРаб — умные сметы</title>
 
 <style>
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Inter,Arial,sans-serif;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    background:#080808;
-    color:white;
+margin:0;
+background:#080808;
+color:white;
 }
 
 
 header{
-    height:80px;
-    border-bottom:1px solid #222;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 8%;
+
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+border-bottom:1px solid #222;
+
 }
 
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:25px;
-    font-weight:700;
+
+display:flex;
+align-items:center;
+gap:12px;
+font-size:26px;
+font-weight:bold;
+
 }
 
 
 .logo-icon{
-    width:45px;
-    height:45px;
-    background:#ff9800;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#111;
-    font-size:24px;
+
+width:45px;
+height:45px;
+background:#ff9800;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#111;
+font-size:25px;
+
 }
 
 
 nav{
-    display:flex;
-    gap:40px;
-    color:#aaa;
+
+display:flex;
+gap:35px;
+
 }
 
 
 nav a{
-    text-decoration:none;
-    color:#aaa;
+
+color:#aaa;
+text-decoration:none;
+
 }
 
 
-button{
-    background:#ff9800;
-    border:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-weight:700;
-    cursor:pointer;
+
+.btn{
+
+background:#ff9800;
+border:0;
+padding:14px 25px;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+
 }
+
 
 
 .hero{
 
-    min-height:700px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:80px 8%;
+padding:80px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
 }
 
 
-.hero-left{
-    max-width:650px;
-}
 
+.hero h1{
 
-h1{
-
-font-size:72px;
-line-height:1.05;
+font-size:70px;
+line-height:1.1;
 
 }
 
 
 .orange{
-    color:#ff9800;
+
+color:#ff9800;
+
 }
 
 
-.subtitle{
+.hero p{
 
-margin-top:30px;
 font-size:22px;
 color:#999;
+max-width:600px;
 line-height:1.5;
 
 }
 
 
-.actions{
 
-margin-top:40px;
-display:flex;
-gap:20px;
+.demo{
 
-}
-
-
-.secondary{
-
-background:transparent;
-border:1px solid #444;
-color:white;
-
-}
-
-
-
-.ai-box{
-
-width:420px;
 background:#111;
 border:1px solid #333;
 border-radius:25px;
 padding:30px;
-box-shadow:0 0 60px rgba(255,152,0,.15);
+width:420px;
 
 }
 
 
-.ai-title{
-
-color:#999;
-margin-bottom:20px;
-
-}
-
-
-.file{
+.demo-item{
 
 background:#191919;
-padding:20px;
-border-radius:15px;
+padding:18px;
+border-radius:12px;
 margin-bottom:15px;
 
 }
 
 
-.file span{
+.demo-item span{
 
-color:#ff9800;
-font-size:25px;
-font-weight:bold;
+color:#999;
 
 }
 
@@ -176,65 +157,85 @@ font-weight:bold;
 
 .section{
 
-padding:80px 8%;
+padding:70px 8%;
 
 }
 
 
-.cards{
+
+h2{
+
+font-size:42px;
+
+}
+
+
+
+.boxes{
 
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:25px;
 margin-top:40px;
 
 }
 
 
-.card{
 
-background:#151515;
-border:1px solid #242424;
-border-radius:20px;
+.box{
+
+background:#111;
+border:1px solid #292929;
+border-radius:22px;
 padding:30px;
 
 }
 
 
-.card h3{
 
-font-size:22px;
-margin-bottom:15px;
+input,select,textarea{
 
-}
-
-
-.card p{
-
-color:#999;
-line-height:1.5;
+width:100%;
+background:#080808;
+border:1px solid #333;
+padding:15px;
+border-radius:10px;
+color:white;
+margin-top:10px;
 
 }
 
 
-.demo{
 
-background:#111;
-border-radius:25px;
-padding:40px;
-margin-top:50px;
+textarea{
+
+height:100px;
 
 }
+
+
+
+label{
+
+display:block;
+margin-top:15px;
+color:#aaa;
+
+}
+
 
 
 .row{
 
+background:#191919;
+padding:15px;
+border-radius:12px;
+margin-top:10px;
 display:flex;
 justify-content:space-between;
-padding:20px 0;
-border-bottom:1px solid #222;
 
 }
+
 
 
 .price{
@@ -246,11 +247,46 @@ font-weight:bold;
 
 
 
+.total{
+
+margin-top:20px;
+font-size:28px;
+background:#191919;
+padding:25px;
+border-radius:15px;
+
+}
+
+
+
+.documents{
+
+display:flex;
+gap:10px;
+margin-top:20px;
+
+}
+
+
+
+.documents button{
+
+flex:1;
+background:#ff9800;
+border:0;
+padding:12px;
+border-radius:10px;
+font-weight:bold;
+
+}
+
+
+
 footer{
 
 padding:40px 8%;
-color:#777;
 border-top:1px solid #222;
+color:#777;
 
 }
 
@@ -259,20 +295,22 @@ border-top:1px solid #222;
 @media(max-width:900px){
 
 .hero{
+
 flex-direction:column;
-gap:50px;
+gap:40px;
+
 }
 
-h1{
-font-size:45px;
-}
+.boxes{
 
-.cards{
 grid-template-columns:1fr;
+
 }
 
 nav{
+
 display:none;
+
 }
 
 }
@@ -282,10 +320,13 @@ display:none;
 </head>
 
 
+
 <body>
 
 
+
 <header>
+
 
 <div class="logo">
 
@@ -300,15 +341,15 @@ ProРаб
 
 <nav>
 
-<a href="#">Возможности</a>
-<a href="#">Сметы</a>
-<a href="#">Документы</a>
-<a href="#">Тарифы</a>
+<a>Возможности</a>
+<a>Сметы</a>
+<a>Материалы</a>
+<a>Документы</a>
 
 </nav>
 
 
-<button>
+<button class="btn">
 Начать бесплатно
 </button>
 
@@ -317,74 +358,75 @@ ProРаб
 
 
 
+
+
 <section class="hero">
 
 
-<div class="hero-left">
-
+<div>
 
 <h1>
 
 Создавайте сметы
 <br>
+
 <span class="orange">
-без ручных расчетов
+быстро и точно
+
 </span>
 
 </h1>
 
 
-<p class="subtitle">
+<p>
 
-ProРаб автоматически рассчитывает стоимость строительства:
-материалы, работы и документы на основе вашего проекта.
+ProРаб помогает строителям создавать профессиональные сметы,
+рассчитывать материалы и выпускать документы для клиента.
 
 </p>
 
 
-<div class="actions">
+<br>
 
-<button>
+<button class="btn">
 Создать смету
 </button>
 
 
-<button class="secondary">
-Загрузить проект
-</button>
-
-
-</div>
-
-
 </div>
 
 
 
+<div class="demo">
 
-<div class="ai-box">
+
+<h3>
+Готовая смета
+</h3>
 
 
-<div class="ai-title">
-Автоматическая смета
+<div class="demo-item">
+
+Дом 150 м²
+
 </div>
 
 
-<div class="file">
+<div class="demo-item">
 
-Проект дома 150 м²
+Работы
 
 <br>
 
 <span>
-Анализ завершен
+650 000 ₽
 </span>
 
 </div>
 
 
 
-<div class="file">
+<div class="demo-item">
 
 Материалы
 
@@ -398,43 +440,225 @@ ProРаб автоматически рассчитывает стоимость
 
 
 
-<div class="file">
+<div class="demo-item">
 
-Работы
+Итого
 
 <br>
 
-<span>
-185 000 ₽
-</span>
+<strong class="orange">
+1 070 000 ₽
+</strong>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Создание новой сметы
+</h2>
+
+
+
+<div class="boxes">
+
+
+
+<div class="box">
+
+<h3>
+1. Клиент
+</h3>
+
+
+<label>
+ФИО клиента
+</label>
+
+<input placeholder="Иван Петров">
+
+
+<label>
+Телефон
+</label>
+
+<input placeholder="+7">
+
+
+<label>
+Адрес объекта
+</label>
+
+<input placeholder="Адрес">
+
 
 </div>
 
 
 
-<div class="file">
 
-Итоговая стоимость
 
-<br>
+<div class="box">
 
-<span>
-605 000 ₽
-</span>
+<h3>
+2. Объект
+</h3>
+
+
+<label>
+Название
+</label>
+
+<input placeholder="Дом Иванова">
+
+
+<label>
+Тип объекта
+</label>
+
+
+<select>
+
+<option>
+Дом
+</option>
+
+<option>
+Квартира
+</option>
+
+<option>
+Ремонт
+</option>
+
+</select>
+
+
+<label>
+Описание
+</label>
+
+<textarea placeholder="Описание работ"></textarea>
+
 
 </div>
 
 
 
-<button style="width:100%">
-Скачать документы
+
+
+<div class="box">
+
+<h3>
+3. Работы
+</h3>
+
+
+<div class="row">
+
+Кладка стен
+
+<span class="price">
+450 000 ₽
+</span>
+
+</div>
+
+
+<div class="row">
+
+Монтаж кровли
+
+<span class="price">
+216 000 ₽
+</span>
+
+</div>
+
+
+<button class="btn">
++ Добавить работу
 </button>
 
 
 </div>
 
 
+
+
+
+<div class="box">
+
+
+<h3>
+4. Материалы из базы
+</h3>
+
+
+<select>
+
+<option>
+Газобетон D500 — 8500 ₽/м³
+</option>
+
+<option>
+Цемент М500 — 620 ₽
+</option>
+
+<option>
+Арматура — 95 ₽/кг
+</option>
+
+<option>
+Кирпич — 32 ₽
+</option>
+
+</select>
+
+
+
+<div class="row">
+
+Газобетон
+
+<span class="price">
+170 000 ₽
+</span>
+
+</div>
+
+
+
+<button class="btn">
++ Добавить материал
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
 </section>
+
+
+
 
 
 
@@ -443,50 +667,67 @@ ProРаб автоматически рассчитывает стоимость
 
 
 <h2>
-Что делает ProРаб
+Итоговая смета
 </h2>
 
 
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-ИИ-сметчик
-</h3>
-
-<p>
-Анализирует проект и автоматически формирует список работ и материалов.
-</p>
-
-</div>
+<div class="box">
 
 
-<div class="card">
+<div class="row">
 
-<h3>
-Документы
-</h3>
+Работы
 
-<p>
-Создание PDF, Word, Excel и печатных документов одной кнопкой.
-</p>
+<span class="price">
+666 000 ₽
+</span>
 
 </div>
 
 
 
-<div class="card">
+<div class="row">
 
-<h3>
-Единая база цен
-</h3>
+Материалы
 
-<p>
-Автоматический расчет стоимости строительства по актуальным данным.
-</p>
+<span class="price">
+280 000 ₽
+</span>
+
+</div>
+
+
+
+<div class="total">
+
+Итого:
+
+<span class="orange">
+946 000 ₽
+</span>
+
+</div>
+
+
+
+<div class="documents">
+
+<button>
+PDF
+</button>
+
+<button>
+Word
+</button>
+
+<button>
+Excel
+</button>
+
+<button>
+Печать
+</button>
+
 
 </div>
 
@@ -496,83 +737,13 @@ ProРаб автоматически рассчитывает стоимость
 
 </section>
 
-
-
-
-
-<section class="section">
-
-
-<h2>
-Пример готовой сметы
-</h2>
-
-
-<div class="demo">
-
-
-<div class="row">
-<span>
-Фундамент
-</span>
-
-<span class="price">
-180 000 ₽
-</span>
-
-</div>
-
-
-<div class="row">
-<span>
-Стены
-</span>
-
-<span class="price">
-260 000 ₽
-</span>
-
-</div>
-
-
-
-<div class="row">
-<span>
-Кровля
-</span>
-
-<span class="price">
-165 000 ₽
-</span>
-
-</div>
-
-
-<div class="row">
-
-<b>
-Общая стоимость
-</b>
-
-<b class="price">
-605 000 ₽
-</b>
-
-</div>
-
-
-</div>
-
-
-</section>
 
 
 
 
 <footer>
 
-ProРаб © 2026  
-Автоматизация строительных расчетов
+ProРаб © 2026
 
 </footer>
 
