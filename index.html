@@ -3,102 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ProРаб — управление строительством</title>
+
 <style>
-body {
+
+*{
+    box-sizing:border-box;
+}
+
+body{
     margin:0;
+    font-family:Arial, sans-serif;
     background:#080808;
     color:white;
-    font-family:Arial, sans-serif;
 }
-.header {
-    padding:25px 8%;
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:80px;
     display:flex;
+    align-items:center;
     justify-content:space-between;
+    padding:0 8%;
+    background:rgba(8,8,8,.85);
+    backdrop-filter:blur(12px);
     border-bottom:1px solid #222;
+    z-index:10;
 }
-.logo {
-    font-size:28px;
-    font-weight:bold;
-    color:#ff7a00;
-}
-button {
-    background:#ff7a00;
-    color:white;
-    border:0;
-    padding:15px 30px;
-    border-radius:8px;
-    font-weight:bold;
-}
-.hero {
-    padding:100px 8%;
-}
-h1 {
-    font-size:70px;
-    max-width:800px;
-}
-.orange {
-    color:#ff7a00;
-}
-p {
-    font-size:22px;
-    color:#aaa;
-    max-width:700px;
-}
-.cards {
+
+
+.logo{
     display:flex;
-    gap:20px;
-    padding:50px 8%;
+    align-items:center;
+    gap:12px;
+    font-size:24px;
+    font-weight:700;
 }
-.card {
+
+
+.logo-icon{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    background:#ff8500;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:black;
+    font-weight:900;
+}
+
+
+nav{
+    display:flex;
+    gap:35px;
+    color:#bbb;
+}
+
+nav a{
+    color:#bbb;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:white;
+}
+
+
+.btn{
+    background:#ff8500;
+    color:white;
+    padding:14px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+.hero{
+    min-height:100vh;
+    padding:180px 8% 80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.hero-text{
+    max-width:650px;
+}
+
+
+h1{
+    font-size:72px;
+    line-height:1.05;
+    margin:0 0 25px;
+}
+
+
+.orange{
+    color:#ff8500;
+}
+
+
+p{
+    color:#aaa;
+    font-size:22px;
+    line-height:1.5;
+}
+
+
+.mockup{
+    width:450px;
+    height:330px;
     background:#151515;
-    padding:30px;
-    border-radius:15px;
-    flex:1;
+    border:1px solid #333;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 60px rgba(255,130,0,.15);
 }
+
+
+.card{
+    background:#202020;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+
+.card span{
+    color:#ff8500;
+    font-size:24px;
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="header">
-<div class="logo">⚒ ProРаб</div>
-<button>Начать бесплатно</button>
+
+<header>
+
+<div class="logo">
+<div class="logo-icon">P</div>
+ProРаб
 </div>
 
-<div class="hero">
+
+<nav>
+<a href="#">Возможности</a>
+<a href="#">Решения</a>
+<a href="#">Тарифы</a>
+<a href="#">Документы</a>
+</nav>
+
+
+<a class="btn" href="#">
+Начать бесплатно
+</a>
+
+
+</header>
+
+
+
+<section class="hero">
+
+
+<div class="hero-text">
+
 <h1>
-Управляйте стройкой на
-<span class="orange">30% эффективнее</span>
+Управляйте стройкой
+<br>
+на <span class="orange">30%</span> эффективнее
 </h1>
+
 
 <p>
 Единая SaaS-платформа для строительных компаний:
-сметы, CRM, материалы, документы и контроль объектов.
+сметы, CRM, материалы и контроль объектов.
 </p>
 
-<button>Создать проект</button>
+
+<br>
+
+<a class="btn">
+Создать проект
+</a>
+
+
 </div>
 
 
-<div class="cards">
+
+<div class="mockup">
 
 <div class="card">
-<h2>Сметы и расчёты</h2>
-<p>Автоматизация расчётов и контроль бюджета.</p>
+Объекты
+<br>
+<span>12</span>
 </div>
+
 
 <div class="card">
-<h2>CRM клиентов</h2>
-<p>Все заказчики и объекты в одном месте.</p>
+Бюджет проектов
+<br>
+<span>24 млн ₽</span>
 </div>
+
 
 <div class="card">
-<h2>Склад материалов</h2>
-<p>Учёт материалов без потерь.</p>
+Выполнение
+<br>
+<span>68%</span>
 </div>
 
+
 </div>
+
+
+</section>
+
 
 </body>
 </html>
