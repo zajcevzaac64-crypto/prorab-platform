@@ -1,337 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background: #0b1118;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-}
-
-
-header {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-}
-
-
-.logo {
-    color: #ff9900;
-    font-size: 26px;
-    font-weight: 700;
-}
-
-
-.login {
-    border: 1px solid #ff9900;
-    color: white;
-    background: transparent;
-    border-radius: 20px;
-    padding: 8px 25px;
-}
-
-
-.hero {
-    height: 430px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-}
-
-
-.hero-text {
-    width: 430px;
-}
-
-
-.hero h1 {
-    font-size: 52px;
-    line-height: 1.05;
-    margin-bottom: 25px;
-}
-
-
-.hero p {
-    color: #9caec4;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-
-.buttons button {
-    padding: 14px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-
-.primary {
-    background:#ff9900;
-    border:none;
-}
-
-
-.secondary {
-    margin-left:15px;
-    background:#151f2d;
-    color:white;
-    border:1px solid #344457;
-}
-
-
-.estimate-card {
-
-    background:#141e2b;
-    border:1px solid #26384d;
-    border-radius:20px;
-
-    width:260px;
-    padding:25px;
-
-}
-
-
-.estimate-card h3 {
-    margin-bottom:10px;
-}
-
-
-.row {
-    display:flex;
-    justify-content:space-between;
-    margin:18px 0;
-    color:#b8c7d9;
-}
-
-
-.total {
-    color:#ff9900;
-    font-size:22px;
-    font-weight:bold;
-}
-
-
-
-.features {
-
-    text-align:center;
-    padding:20px 0;
-
-}
-
-
-.features h2 {
-
-    font-size:34px;
-    margin-bottom:30px;
-
-}
-
-
-
-.cards {
-
-    display:flex;
-    justify-content:center;
-    gap:20px;
-
-}
-
-
-
-.card {
-
-    width:170px;
-    height:95px;
-
-    background:#141e2b;
-
-    border:1px solid #26384d;
-
-    border-radius:15px;
-
-    padding:18px;
-
-    text-align:left;
-
-}
-
-
-.card h3 {
-
-    color:#ff9900;
-    font-size:16px;
-    margin-bottom:10px;
-
-}
-
-
-.card p {
-
-    color:#9caec4;
-    font-size:13px;
-
-}
-
-
-
-
-.include {
-
-    text-align:center;
-
-    padding-top:25px;
-
-}
-
-
-.include h2 {
-
-    font-size:34px;
-    margin-bottom:25px;
-
-}
-
-
-.include-grid {
-
-    display:grid;
-
-    grid-template-columns:repeat(3,260px);
-
-    justify-content:center;
-
-    gap:20px;
-
-}
-
-
-
-.include-card {
-
-    height:100px;
-
-    background:#141e2b;
-
-    border:1px solid #26384d;
-
-    border-radius:15px;
-
-    padding:18px;
-
-    text-align:left;
-
-}
-
-
-.include-card h3 {
-
-    color:#ff9900;
-    font-size:16px;
-
-    margin-bottom:8px;
-
-}
-
-
-.include-card p {
-
-    color:#9caec4;
-
-    font-size:13px;
-
-}
-
-
-
-footer {
-
-    text-align:center;
-
-    color:#73849a;
-
-    font-size:13px;
-
-    margin-top:30px;
-
-}
-/* Настройка первого экрана */
-
-body {
+html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
-.hero {
-    min-height: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
+body {
+    background: #0b121a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
 }
 
-.hero h1 {
-    font-size: 54px;
-    line-height: 1.08;
-    margin-bottom: 20px;
+
+/* ШАПКА */
+
+header {
+    height: 70px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.hero p {
+header .logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ff9900;
+}
+
+header button {
+    border: 1px solid #ff9900;
+    background: transparent;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+section:first-of-type {
+    min-height: 520px;
+    padding: 60px 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+
+section:first-of-type h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    margin: 0 0 25px;
+}
+
+
+section:first-of-type p {
     font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    color: #9caec2;
+    max-width: 500px;
 }
 
-.hero-card {
-    transform: scale(0.9);
+
+button {
+    cursor: pointer;
 }
 
-.features {
-    padding-top: 40px;
-    padding-bottom: 50px;
+
+/* Карточка сметы */
+
+.estimate,
+.card,
+.quote-card {
+    background: #131e2b;
+    border: 1px solid #24364a;
+    border-radius: 24px;
+    padding: 30px;
 }
 
-.features h2 {
-    margin-bottom: 35px;
+
+
+/* Возможности */
+
+section {
+    padding: 50px 10%;
 }
 
-.feature-card {
-    padding: 24px;
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
-.services {
-    padding-top: 50px;
+
+.features,
+.cards,
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 }
+
+
+.features > div,
+.cards > div {
+    background:#131e2b;
+    border:1px solid #24364a;
+    border-radius:20px;
+    padding:25px;
+}
+
+
+/* Убираем лишнюю высоту */
 
 footer {
-    margin-top: 40px;
+    padding:30px;
 }
 
 
-/* Для ноутбуков */
-@media (max-height: 800px) {
+/* ноутбуки */
 
-    .hero {
-        padding-top: 40px;
-        padding-bottom: 40px;
+@media(max-height:850px){
+
+    section:first-of-type {
+        min-height:450px;
+        padding-top:30px;
+        padding-bottom:30px;
     }
 
-    .hero h1 {
-        font-size: 46px;
+    section:first-of-type h1{
+        font-size:46px;
     }
 
-    .features {
-        padding-top: 20px;
-    }
-
-    .features h2 {
-        margin-bottom: 20px;
+    section{
+        padding-top:30px;
+        padding-bottom:30px;
     }
 
 }
