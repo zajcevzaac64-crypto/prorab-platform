@@ -2,144 +2,221 @@
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 body {
-    background: #0b121a;
+    margin: 0;
+    background: #0b1118;
     color: #ffffff;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
-
-/* ШАПКА */
-
+/* Шапка */
 header {
     height: 70px;
-    padding: 0 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 60px;
 }
 
-header .logo {
+.logo {
+    color: #ff9900;
     font-size: 32px;
     font-weight: 800;
-    color: #ff9900;
 }
 
-header button {
+.login-btn {
     border: 1px solid #ff9900;
     background: transparent;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 35px;
     border-radius: 25px;
 }
 
 
-/* ГЛАВНЫЙ ЭКРАН */
-
-section:first-of-type {
-    min-height: 520px;
-    padding: 60px 12%;
+/* Главный экран */
+.hero {
+    height: 360px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 120px;
 }
 
 
-section:first-of-type h1 {
+.hero-text {
+    width: 520px;
+}
+
+
+.hero h1 {
     font-size: 56px;
     line-height: 1.05;
     margin: 0 0 25px;
 }
 
 
-section:first-of-type p {
-    font-size: 18px;
-    color: #9caec2;
-    max-width: 500px;
+.hero p {
+    color: #9ba9bb;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 
-button {
-    cursor: pointer;
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
 }
+
+
+.btn-main {
+    background: #ff9900;
+    color: black;
+    padding: 16px 35px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+
+.btn-second {
+    background: #141f2c;
+    color: white;
+    border: 1px solid #314154;
+    padding: 16px 35px;
+    border-radius: 10px;
+}
+
 
 
 /* Карточка сметы */
-
-.estimate,
-.card,
-.quote-card {
-    background: #131e2b;
-    border: 1px solid #24364a;
-    border-radius: 24px;
+.estimate {
+    width: 360px;
+    background: #141f2c;
+    border-radius: 22px;
     padding: 30px;
+    border: 1px solid #26384c;
+}
+
+
+.estimate h3 {
+    margin-top:0;
+}
+
+
+.line {
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #26384c;
+}
+
+
+.total {
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    font-size:22px;
+}
+
+
+.total span {
+    color:#ff9900;
+    font-weight:bold;
 }
 
 
 
 /* Возможности */
-
-section {
-    padding: 50px 10%;
+.features {
+    height:260px;
+    text-align:center;
 }
 
 
-h2 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
+.features h2 {
+    font-size:36px;
 }
 
 
-.features,
-.cards,
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+.feature-grid {
+    display:flex;
+    justify-content:center;
+    gap:20px;
 }
 
 
-.features > div,
-.cards > div {
-    background:#131e2b;
-    border:1px solid #24364a;
-    border-radius:20px;
-    padding:25px;
+.feature-card {
+    width:230px;
+    height:110px;
+    background:#141f2c;
+    border:1px solid #26384c;
+    border-radius:15px;
+    padding:20px;
+    text-align:left;
 }
 
 
-/* Убираем лишнюю высоту */
+.feature-card h3 {
+    margin:0;
+    color:#ff9900;
+    font-size:18px;
+}
 
+
+.feature-card p {
+    color:#9ba9bb;
+    font-size:14px;
+}
+
+
+
+/* Что входит */
+.services {
+    height:250px;
+}
+
+
+.services h2 {
+    text-align:center;
+    font-size:34px;
+}
+
+
+.service-grid {
+    display:grid;
+    grid-template-columns:repeat(3,300px);
+    justify-content:center;
+    gap:20px;
+}
+
+
+.service-card {
+    background:#141f2c;
+    border:1px solid #26384c;
+    border-radius:18px;
+    padding:20px;
+}
+
+
+.service-card h3 {
+    color:#ff9900;
+    margin:0 0 10px;
+}
+
+
+.service-card p {
+    color:#9ba9bb;
+    margin:0;
+}
+
+
+
+/* Подвал */
 footer {
-    padding:30px;
-}
-
-
-/* ноутбуки */
-
-@media(max-height:850px){
-
-    section:first-of-type {
-        min-height:450px;
-        padding-top:30px;
-        padding-bottom:30px;
-    }
-
-    section:first-of-type h1{
-        font-size:46px;
-    }
-
-    section{
-        padding-top:30px;
-        padding-bottom:30px;
-    }
-
+    height:60px;
+    text-align:center;
+    color:#75859a;
+    font-size:14px;
 }
