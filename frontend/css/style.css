@@ -303,8 +303,8 @@ grid-template-columns:1fr;
 
 html,
 body {
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 body {
