@@ -440,8 +440,4 @@ body::before {
 }
 
 
-header,
-main {
-    position: relative;
-    z-index: 1;
-}
+
