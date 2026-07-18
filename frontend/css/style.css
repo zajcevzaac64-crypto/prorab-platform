@@ -411,3 +411,8 @@ body::before {
 
     z-index:0;
 }
+header,
+main {
+    position:relative;
+    z-index:1;
+}
