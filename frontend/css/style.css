@@ -2,14 +2,16 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
 
     background:
         linear-gradient(
-            rgba(5,10,18,0.82),
-            rgba(5,10,18,0.9)
+            rgba(5,10,18,0.55),
+            rgba(5,10,18,0.75)
         ),
         url("../images/construction-bg.png");
 
@@ -17,33 +19,99 @@ body {
     background-position: center;
     background-attachment: fixed;
 
-    color: #ffffff;
+    color: white;
+
     overflow-x: hidden;
 }
 
 
+/* СЕТКА ЧЕРТЕЖА */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+
+    background-size:
+
+        40px 40px,
+
+        40px 40px;
+
+}
+
+
+
+/* ЧТОБЫ КОНТЕНТ БЫЛ СВЕРХУ */
+
+
+header,
+main,
+section {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+
 /* HEADER */
 
-header {
-    height: 80px;
-    padding: 0 60px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+
+    height:80px;
+
+    padding:0 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
 }
 
 
 .logo {
-    color: #ff9800;
-    font-size: 32px;
-    font-weight: 800;
+
+    color:#ff9800;
+
+    font-size:32px;
+
+    font-weight:800;
+
 }
 
 
 .login {
 
-    background: transparent;
+    background:transparent;
+
     color:white;
 
     border:1px solid #ff9800;
@@ -62,9 +130,10 @@ header {
 .hero {
 
     width:1100px;
+
     max-width:90%;
 
-    margin:80px auto;
+    margin:40px auto;
 
     display:flex;
 
@@ -161,8 +230,6 @@ header {
 
 
 
-
-
 /* ESTIMATE */
 
 
@@ -225,13 +292,12 @@ header {
 }
 
 
+
 .total b {
 
     color:#ff9800;
 
 }
-
-
 
 
 
@@ -244,7 +310,7 @@ header {
 
     max-width:90%;
 
-    margin:60px auto;
+    margin:40px auto;
 
 }
 
@@ -256,7 +322,7 @@ header {
 
     font-size:40px;
 
-    margin-bottom:50px;
+    margin-bottom:35px;
 
 }
 
@@ -276,7 +342,6 @@ header {
 
 .card {
 
-
     background:#101c2b;
 
     border:1px solid #26384d;
@@ -285,6 +350,7 @@ header {
 
     padding:25px;
 
+    min-height:150px;
 
 }
 
@@ -297,6 +363,7 @@ header {
 }
 
 
+
 .card p {
 
     color:#9fb0c5;
@@ -306,6 +373,8 @@ header {
 }
 
 
+
+/* MOBILE */
 
 
 @media(max-width:900px){
@@ -341,6 +410,7 @@ header {
 }
 
 
+
 .cards {
 
     grid-template-columns:1fr;
@@ -349,156 +419,3 @@ header {
 
 
 }
-/* ===== FINAL SPACING FIX ===== */
-
-.hero {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-
-.hero h1 {
-    font-size: 56px;
-}
-
-
-.features {
-    margin-top: 40px;
-}
-
-
-.features h2 {
-    margin-bottom: 35px;
-}
-
-
-.card {
-    min-height: 150px;
-}
-body::before {
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,0.025) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.025) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        40px 40px;
-
-    pointer-events:none;
-
-    z-index:0;
-}
-header,
-main {
-    position:relative;
-    z-index:1;
-}
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-
-    background-image:
-        url("https://cdn-icons-png.flaticon.com/512/2942/2942789.png"),
-        url("https://cdn-icons-png.flaticon.com/512/2920/2920277.png"),
-        url("https://cdn-icons-png.flaticon.com/512/992/992651.png");
-
-    background-repeat: no-repeat;
-
-    background-size:
-        180px,
-        160px,
-        170px;
-
-    background-position:
-        8% 30%,
-        90% 65%,
-        75% 15%;
-
-    opacity: 0.035;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-
-    background:
-
-    /* сетка чертежа */
-    linear-gradient(
-        rgba(255,255,255,0.035) 1px,
-        transparent 1px
-    ),
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,0.035) 1px,
-        transparent 1px
-    ),
-
-    /* оранжевая разметка */
-    linear-gradient(
-        90deg,
-        transparent 49.8%,
-        rgba(255,152,0,0.15) 50%,
-        transparent 50.2%
-    ),
-
-    linear-gradient(
-        0deg,
-        transparent 49.8%,
-        rgba(255,152,0,0.15) 50%,
-        transparent 50.2%
-    ),
-
-    /* круг циркуля */
-    radial-gradient(
-        circle at 15% 35%,
-        transparent 0 70px,
-        rgba(255,152,0,0.18) 71px,
-        transparent 73px
-    ),
-
-    /* большой чертёж */
-    radial-gradient(
-        circle at 85% 65%,
-        transparent 0 100px,
-        rgba(70,130,220,0.12) 101px,
-        transparent 104px
-    );
-
-    background-size:
-        40px 40px,
-        40px 40px,
-        auto,
-        auto,
-        auto,
-        auto;
-
-}
-
-
-header,
-main {
-    position: relative;
-    z-index: 1;
-}
-
