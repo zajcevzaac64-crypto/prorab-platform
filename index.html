@@ -1,440 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>ProРаб — умная смета</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>ПроРаб — профессиональные сметы ремонта</title>
 
-*{
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-margin:0;
-background:#0b0b0b;
-color:white;
-}
-
-
-header{
-height:75px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 40px;
-border-bottom:1px solid #222;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:24px;
-font-weight:bold;
-}
-
-
-.logo-icon{
-width:42px;
-height:42px;
-background:#ff9900;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:black;
-font-size:22px;
-}
-
-
-.container{
-padding:40px;
-}
-
-
-h1{
-font-size:38px;
-}
-
-
-.card{
-background:#151515;
-border:1px solid #292929;
-border-radius:16px;
-padding:25px;
-margin-bottom:25px;
-}
-
-
-input,select{
-background:#222;
-border:1px solid #444;
-color:white;
-padding:12px;
-border-radius:8px;
-margin:5px;
-}
-
-
-button{
-padding:12px 20px;
-border-radius:8px;
-border:none;
-cursor:pointer;
-font-weight:bold;
-}
-
-
-.orange{
-background:#ff9900;
-}
-
-
-.pdf{
-background:#e53935;
-color:white;
-}
-
-.word{
-background:#1976d2;
-color:white;
-}
-
-.excel{
-background:#2e7d32;
-color:white;
-}
-
-
-.search{
-width:350px;
-}
-
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-
-td,th{
-padding:15px;
-border-bottom:1px solid #333;
-text-align:left;
-}
-
-
-.total{
-font-size:28px;
-color:#ff9900;
-}
-
-</style>
-
+    <link rel="stylesheet" href="frontend/css/style.css">
 </head>
-
 
 <body>
 
+<header class="header">
+    <div class="logo">
+        🏗 ПроРаб
+    </div>
 
-<header>
-
-<div class="logo">
-
-<div class="logo-icon">
-🏗
-</div>
-
-ProРаб
-
-</div>
-
-
-<div>
-<button class="orange">
-Начать смету
-</button>
-</div>
-
+    <button class="login">
+        Войти
+    </button>
 </header>
 
 
+<section class="hero">
 
-<div class="container">
+    <h1>
+        Профессиональные сметы
+        для строительных работ
+    </h1>
 
+    <p>
+        Создавайте расчёты ремонта,
+        управляйте материалами
+        и контролируйте проекты
+    </p>
 
-<h1>
-Смета №000125
-</h1>
 
+    <div class="buttons">
 
-<div class="card">
+        <button class="primary">
+            Создать смету
+        </button>
 
-<h2>
-Информация о клиенте
-</h2>
+        <button class="secondary">
+            Посмотреть возможности
+        </button>
 
+    </div>
 
-<input placeholder="ФИО клиента">
+</section>
 
-<input placeholder="Телефон">
 
-<input placeholder="Адрес">
+<footer>
 
+    <p>
+        ProРаб © 2026
+    </p>
 
-</div>
+    <p>
+        ☕ Разработчику на чай
+    </p>
 
+</footer>
 
 
-<div class="card">
-
-<h2>
-Объект
-</h2>
-
-
-<input placeholder="Название объекта">
-
-<input placeholder="Тип объекта">
-
-<input placeholder="Площадь м²">
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h2>
-Работы из базы
-</h2>
-
-
-<input class="search"
-placeholder="🔎 Поиск работы">
-
-
-<br>
-
-
-<select>
-
-<option>
-Кладка стен
-</option>
-
-<option>
-Фундамент
-</option>
-
-<option>
-Кровля
-</option>
-
-<option>
-Отделка
-</option>
-
-</select>
-
-
-<input placeholder="Количество">
-
-<button class="orange">
-Добавить работу
-</button>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h2>
-Материалы из базы
-</h2>
-
-
-<input class="search"
-placeholder="🔎 Поиск материала">
-
-
-<br>
-
-
-<select>
-
-
-<option>
-Бетон М300
-</option>
-
-
-<option>
-Арматура
-</option>
-
-
-<option>
-Газобетон
-</option>
-
-
-<option>
-Кирпич
-</option>
-
-
-</select>
-
-
-<input placeholder="Количество">
-
-
-<button class="orange">
-Добавить материал
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Состав сметы
-</h2>
-
-
-<table>
-
-
-<tr>
-
-<th>
-Наименование
-</th>
-
-<th>
-Количество
-</th>
-
-<th>
-Цена
-</th>
-
-<th>
-Сумма
-</th>
-
-</tr>
-
-
-
-<tr>
-
-<td>
-Фундамент
-</td>
-
-<td>
-1
-</td>
-
-<td>
-350 000 ₽
-</td>
-
-<td>
-350 000 ₽
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Бетон М300
-</td>
-
-<td>
-10 м³
-</td>
-
-<td>
-8 000 ₽
-</td>
-
-<td>
-80 000 ₽
-</td>
-
-</tr>
-
-
-</table>
-
-
-
-<p class="total">
-Итого: 430 000 ₽
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Документы
-</h2>
-
-
-<button class="pdf">
-PDF
-</button>
-
-
-<button class="word">
-Word
-</button>
-
-
-<button class="excel">
-Excel
-</button>
-
-
-<button>
-🖨 Печать
-</button>
-
-
-
-</div>
-
-
-
-</div>
-
+<script src="frontend/js/app.js"></script>
 
 </body>
 </html>
