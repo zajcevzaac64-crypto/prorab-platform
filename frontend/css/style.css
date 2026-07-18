@@ -264,3 +264,74 @@ footer {
     margin-top:30px;
 
 }
+/* Настройка первого экрана */
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.hero-card {
+    transform: scale(0.9);
+}
+
+.features {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.features h2 {
+    margin-bottom: 35px;
+}
+
+.feature-card {
+    padding: 24px;
+}
+
+.services {
+    padding-top: 50px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+
+/* Для ноутбуков */
+@media (max-height: 800px) {
+
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .features {
+        padding-top: 20px;
+    }
+
+    .features h2 {
+        margin-bottom: 20px;
+    }
+
+}
