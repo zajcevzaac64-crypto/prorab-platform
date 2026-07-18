@@ -439,5 +439,35 @@ body::before {
     opacity: 0.035;
 }
 
+/* строительный чертёж на фоне */
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg, transparent 49%, rgba(255,152,0,0.08) 50%, transparent 51%),
+        linear-gradient(0deg, transparent 49%, rgba(255,152,0,0.08) 50%, transparent 51%),
+
+        radial-gradient(circle at 15% 35%,
+        transparent 0 60px,
+        rgba(255,152,0,0.08) 61px,
+        transparent 63px),
+
+        radial-gradient(circle at 85% 70%,
+        transparent 0 80px,
+        rgba(70,130,220,0.08) 81px,
+        transparent 83px);
+
+}
+
+
+header,
+main {
+    position: relative;
+    z-index: 1;
+}
 
