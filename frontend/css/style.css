@@ -439,8 +439,6 @@ body::before {
     opacity: 0.035;
 }
 
-/* строительный чертёж на фоне */
-
 body::before {
     content: "";
     position: fixed;
@@ -449,18 +447,56 @@ body::before {
     pointer-events: none;
 
     background:
-        linear-gradient(90deg, transparent 49%, rgba(255,152,0,0.08) 50%, transparent 51%),
-        linear-gradient(0deg, transparent 49%, rgba(255,152,0,0.08) 50%, transparent 51%),
 
-        radial-gradient(circle at 15% 35%,
-        transparent 0 60px,
-        rgba(255,152,0,0.08) 61px,
-        transparent 63px),
+    /* сетка чертежа */
+    linear-gradient(
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px
+    ),
 
-        radial-gradient(circle at 85% 70%,
-        transparent 0 80px,
-        rgba(70,130,220,0.08) 81px,
-        transparent 83px);
+    /* оранжевая разметка */
+    linear-gradient(
+        90deg,
+        transparent 49.8%,
+        rgba(255,152,0,0.15) 50%,
+        transparent 50.2%
+    ),
+
+    linear-gradient(
+        0deg,
+        transparent 49.8%,
+        rgba(255,152,0,0.15) 50%,
+        transparent 50.2%
+    ),
+
+    /* круг циркуля */
+    radial-gradient(
+        circle at 15% 35%,
+        transparent 0 70px,
+        rgba(255,152,0,0.18) 71px,
+        transparent 73px
+    ),
+
+    /* большой чертёж */
+    radial-gradient(
+        circle at 85% 65%,
+        transparent 0 100px,
+        rgba(70,130,220,0.12) 101px,
+        transparent 104px
+    );
+
+    background-size:
+        40px 40px,
+        40px 40px,
+        auto,
+        auto,
+        auto,
+        auto;
 
 }
 
