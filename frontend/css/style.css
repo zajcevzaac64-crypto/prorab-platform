@@ -337,3 +337,29 @@ header {
 
 
 }
+/* ===== FINAL SPACING FIX ===== */
+
+.hero {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.hero h1 {
+    font-size: 56px;
+}
+
+
+.features {
+    margin-top: 40px;
+}
+
+
+.features h2 {
+    margin-bottom: 35px;
+}
+
+
+.card {
+    min-height: 150px;
+}
